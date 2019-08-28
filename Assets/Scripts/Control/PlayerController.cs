@@ -11,7 +11,7 @@ namespace RPG.Control
     {
         private void Update()
         {
-            if(InteractWithCombat()) return;
+            if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
         }
 
@@ -25,7 +25,7 @@ namespace RPG.Control
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    GetComponent<Fighter>().Attack();
+                    GetComponent<Fighter>().Attack(target);
                 }
                 return true;
             }
